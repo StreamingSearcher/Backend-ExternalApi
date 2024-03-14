@@ -25,3 +25,4 @@ COPY --from=publish /app/publish .
 
 ENTRYPOINT ["dotnet", "RelationalMicroservice.dll", "--urls", "http://0.0.0.0:3000"]
 
+
