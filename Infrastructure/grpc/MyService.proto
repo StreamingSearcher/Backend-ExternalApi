@@ -1,0 +1,14 @@
+syntax = "proto3";
+
+service MiServicio {
+    rpc MiMetodo(MiMensaje) returns (MiRespuesta);
+}
+
+message MiMensaje {
+    string campo1 = 1;
+    int32 campo2 = 2;
+}
+
+message MiRespuesta {
+    string resultado = 1;
+}
