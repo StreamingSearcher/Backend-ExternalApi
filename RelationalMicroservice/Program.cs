@@ -44,7 +44,7 @@ if (app.Environment.IsDevelopment())
 }
 
 app.MapGrpcService<MediaServices>();
-//app.UseHttpsRedirection();
+app.UseHttpsRedirection();
 app.UseAuthorization();
 app.MapControllers();
 
