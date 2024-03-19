@@ -23,8 +23,5 @@ FROM base AS final
 WORKDIR /app 
 COPY --from=publish /app/publish .
 
+ENTRYPOINT ["dotnet", "RelationalMicroservice.dll", "--urls", "http://0.0.0.0:3000"]
 
-
-ENTRYPOINT ["dotnet", "RelationalMicroservice.dll"]
-
-# docker run -p 8080:80 -p 8081:3000 -e ASPNETCORE_URLS="https://+;http://+" -e ASPNETCORE_HTTPS_PORT=8081 -e ASPNETCORE_ENVIROMENT=Development -v $env:APPDATA\microsoft\UserSecrets\:/root/.microsoft/usersecrets rm-image
